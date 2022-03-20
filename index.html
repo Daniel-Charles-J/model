@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <h1>Registration form</h1>
+    <form class="form">
+      <label for="fname" class="label">First name</label>
+      <input type="text" id="fname" class="fname" placeholder="First name" required>
+      <br>
+      <br>
+      <label for="lname" class="label">Last name</label>
+      <input type="text" id="lname" class="lname" placeholder="Last name" required>
+      <br>
+      <br>
+      <label for="e-mail" class="label">E-mail</label>
+      <input type="text" id="e-mail" class="email" placeholder="testing@gmail.com"
+        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+      <br>
+      <br>
+      <label for="phone" class="label">Mobile</label>
+      <input type="text" id="phone" class="phone" placeholder="9688225806" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <br>
+      <br>
+      <input type="button" class="submit" id="submit" value="submit" onclick="showModal()">
+    </form>
+  </div>
+  <div class="hide pop-up" id="popup">
+    <p class="cancel" id="cancel" onclick="hideModal()">x</p>
+    <p>Congratulations!</p>
+    <p>You have successfully registered the form.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
